@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipermarket J.R. - Tu Supermercado de Confianza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #dc3545;
+            --secondary-color: #6c757d;
+            --accent-color: #ffc107;
+        }
+        
+        .hero-banner {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1200x600/dc3545/ffffff?text=Productos+Frescos') center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .category-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: scale(1.02);
+        }
+        
+        .promo-section {
+            background: linear-gradient(135deg, var(--primary-color), #a71e2a);
+            color: white;
+        }
+        
+        .testimonial-card {
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-store me-2"></i>Hipermarket J.R.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ofertas">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicio">Servicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section id="inicio" class="hero-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">¡Bienvenido al Hipermarket J.R.!</h1>
+                    <p class="lead mb-4">Todo lo que necesitas para tu hogar, en un solo lugar. Compra fácil, rápido y con precios bajos todos los días.</p>
+                    <button class="btn btn-warning btn-lg">
+                        <i class="fas fa-shopping-cart me-2"></i>Compra ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Nuestras Categorías</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card category-card text-center p-4">
+                        <i class="fas fa-apple-alt fa-3x text-danger mb-3"></i>
+                        <h4>Víveres y Abarrotes</h4>
+                        <p>Arroz, frijoles, aceites y más</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card category-card text-center p-4">
+                        <i class="fas fa-cheese fa-3x text-warning mb-3"></i>
+                        <h4>Lácteos y Refrigerados</h4>
+                        <p>Leche, quesos, yogures y derivados</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card category-card text-center p-4">
+                        <i class="fas fa-bread-slice fa-3x text-info mb-3"></i>
+                        <h4>Panadería y Repostería</h4>
+                        <p>Panes frescos y pasteles deliciosos</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card category-card text-center p-4">
+                        <i class="fas fa-candy-cane fa-3x text-success mb-3"></i>
+                        <h4>Snacks y Golosinas</h4>
+                        <p>Chocolates, papas fritas y dulces</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card category-card text-center p-4">
+                        <i class="fas fa-pump-soap fa-3x text-primary mb-3"></i>
+                        <h4>Limpieza y Aseo</h4>
+                        <p>Productos de limpieza y cuidado personal</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card category-card text-center p-4">
+                        <i class="fas fa-wine-bottle fa-3x text-secondary mb-3"></i>
+                        <h4>Bebidas y Congelados</h4>
+                        <p>Gaseosas, aguas y productos congelados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section id="catalogo" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Productos Destacados</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/300x200/4CAF50/white?text=Manzanas" class="card-img-top" alt="Manzanas">
+                        <div class="card-body">
+                            <h5 class="card-title">Manzanas Rojas</h5>
+                            <p class="card-text">1 kg • Frescas y crujientes</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">$2.50</span>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/300x200/FF9800/white?text=Leche" class="card-img-top" alt="Leche">
+                        <div class="card-body">
+                            <h5 class="card-title">Leche Entera</h5>
+                            <p class="card-text">1 litro • Marca La Vaquita</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">$1.20</span>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/300x200/2196F3/white?text=Pan" class="card-img-top" alt="Pan">
+                        <div class="card-body">
+                            <h5 class="card-title">Pan Integral</h5>
+                            <p class="card-text">500g • Recién horneado</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">$0.80</span>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/300x200/F44336/white?text=Galletas" class="card-img-top" alt="Galletas">
+                        <div class="card-body">
+                            <h5 class="card-title">Galletas Oreo</h5>
+                            <p class="card-text">1 paquete • 157g</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">$1.50</span>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/300x200/9C27B0/white?text=Detergente" class="card-img-top" alt="Detergente">
+                        <div class="card-body">
+                            <h5 class="card-title">Detergente Ariel</h5>
+                            <p class="card-text">1kg • Para ropa blanca</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">$3.20</span>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/300x200/00BCD4/white?text=Coca+Cola" class="card-img-top" alt="Coca Cola">
+                        <div class="card-body">
+                            <h5 class="card-title">Coca Cola</h5>
+                            <p class="card-text">2.5L • Refresco familiar</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">$2.80</span>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/300x200/FF5722/white?text=Helado" class="card-img-top" alt="Helado">
+                        <div class="card-body">
+                            <h5 class="card-title">Helado Frutilla</h5>
+                            <p class="card-text">1L • Sabor natural</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">$4.50</span>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/300x200/8BC34A/white?text=Plátanos" class="card-img-top" alt="Plátanos">
+                        <div class="card-body">
+                            <h5 class="card-title">Plátanos Ecuatorianos</h5>
+                            <p class="card-text">1 racimo • Orgánicos</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">$1.80</span>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promociones -->
+    <section id="ofertas" class="promo-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Ofertas Especiales</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-percentage fa-3x text-danger mb-3"></i>
+                            <h4>2x1 en Snacks</h4>
+                            <p class="mb-3">Llévate dos productos por el precio de uno</p>
+                            <small>Válido hasta el 30 de junio</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-tags fa-3x text-warning mb-3"></i>
+                            <h4>Combo Familiar</h4>
+                            <p class="mb-3">Arroz + Frijoles + Aceite = $5.99</p>
+                            <small>Ahorra $2.00</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-gift fa-3x text-success mb-3"></i>
+                            <h4>Descuento Semanal</h4>
+                            <p class="mb-3">15% en productos de limpieza</p>
+                            <small>Aplica todos los miércoles</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicio a Domicilio -->
+    <section id="servicio" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2>Servicio a Domicilio</h2>
+                    <p class="lead">¡Te llevamos tus compras hasta la puerta de tu casa!</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-map-marker-alt text-danger me-2"></i> Cobertura: Tulcán y alrededores</li>
+                        <li class="mb-3"><i class="fas fa-clock text-primary me-2"></i> Horario: Lunes a Domingo 8:00 - 20:00</li>
+                        <li class="mb-3"><i class="fas fa-truck text-success me-2"></i> Entrega en 2-4 horas</li>
+                        <li class="mb-3"><i class="fas fa-phone text-warning me-2"></i> WhatsApp: 0983615196</li>
+                    </ul>
+                    <button class="btn btn-danger btn-lg">
+                        <i class="fab fa-whatsapp me-2"></i>Haz tu pedido por WhatsApp
+                    </button>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://placehold.co/600x400/4CAF50/white?text=Entrega+a+Domicilio" class="img-fluid rounded" alt="Entrega a Domicilio">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Quiénes Somos</h2>
+                    <p class="lead">Hipermarket J.R. nació con el propósito de brindar a las familias de Tulcán un espacio donde encuentren todo lo que necesitan al mejor precio.</p>
+                    <h4>Misión</h4>
+                    <p>Ofrecer productos de calidad con precios competitivos, brindando un servicio excepcional que supere las expectativas de nuestros clientes.</p>
+                    <h4>Visión</h4>
+                    <p>Ser el supermercado preferido de la comunidad tulqueña, reconocido por nuestra excelencia en productos, servicio y compromiso con la comunidad.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://placehold.co/600x400/dc3545/white?text=Nuestra+Tienda" class="img-fluid rounded" alt="Nuestra Tienda">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Lo Que Dicen Nuestros Clientes</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"Excelente servicio, siempre encuentro todo lo que necesito y los productos llegan frescos y rápido."</p>
+                            <footer class="blockquote-footer">María A.</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <p class="card-text">"Los precios son muy buenos y la atención es excelente. Mis compras favoritas las hago aquí."</p>
+                            <footer class="blockquote-footer">Carlos M.</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"El servicio a domicilio es muy puntual y los productos siempre están en perfectas condiciones. Muy recomendado."</p>
+                            <footer class="blockquote-footer">Ana R.</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contáctanos</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="mb-4">Información de Contacto</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <i class="fas fa-map-marker-alt text-danger me-3"></i>
+                                    CALLES SANGAY E ILALO FRENTE A LA UNIVERSIDAD POLITÉCNICA ESTATAL DEL CARCHI
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fab fa-whatsapp text-success me-3"></i>
+                                    0983615196
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-envelope text-primary me-3"></i>
+                                    info@hipermarketjr.com
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-clock text-warning me-3"></i>
+                                    Lunes a Domingo: 8:00 AM - 8:00 PM
+                                </li>
+                            </ul>
+                            
+                            <h5 class="mt-4 mb-3">Síguenos en Redes Sociales</h5>
+                            <div class="d-flex">
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="mb-4">Envíanos un Mensaje</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Tu email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control" placeholder="Tu teléfono">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="Tu mensaje" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-danger w-100">Enviar Mensaje</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4>Hipermarket J.R.</h4>
+                    <p>Tu supermercado de confianza en Tulcán. Productos frescos, atención rápida y entregas seguras a domicilio.</p>
+                    <div class="d-flex">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Enlaces</h5>
+                    <div class="footer-links">
+                        <div><a href="#inicio">Inicio</a></div>
+                        <div><a href="#catalogo">Catálogo</a></div>
+                        <div><a href="#ofertas">Ofertas</a></div>
+                        <div><a href="#nosotros">Nosotros</a></div>
+                        <div><a href="#contacto">Contacto</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Horarios</h5>
+                    <p>Lunes a Domingo<br>8:00 AM - 8:00 PM</p>
+                    <h5 class="mt-3">Métodos de Pago</h5>
+                    <div>
+                        <i class="fab fa-cc-visa me-2"></i>
+                        <i class="fab fa-cc-mastercard me-2"></i>
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Ubicación</h5>
+                    <p>CALLES SANGAY E ILALO<br>FRENTE A LA UNIVERSIDAD POLITÉCNICA ESTATAL DEL CARCHI<br>TULCÁN - ECUADOR</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2025 Hipermarket J.R. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
